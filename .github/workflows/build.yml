@@ -16,11 +16,8 @@ env:
 
 jobs:
   build:
-    name: Build ${{ matrix.os }}
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [windows-latest]
+    name: Build
+    runs-on: windows-latest
     
     steps:
       - name: Checkout
@@ -89,36 +86,3 @@ jobs:
           draft: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  create-issue-on-release:
-    name: Create Welcome Issue
-    needs: release
-    runs-on: ubuntu-latest
-    if: github.event.action == 'published'
-    
-    steps:
-      - name: Create issue
-        uses: actions/github-script@v7
-        with:
-          script: |
-            github.rest.issues.create({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              title: '🎉 Welcome to WingetTrayUpdater!',
-              body: `Thank you for downloading WingetTrayUpdater v${context.payload.release.tag_name}!
-
-## Getting Started
-
-1. Run \`WingetTrayUpdater.exe\`
-2. Look for the 📦 icon in your system tray
-3. The app will automatically check for updates
-
-## Need Help?
-
-- Check the [README](https://github.com/${context.repo.owner}/${context.repo.repo}/blob/main/README.md)
-- [Report an issue](https://github.com/${context.repo.owner}/${context.repo.repo}/issues/new)
-
-## What's New?
-
-${context.payload.release.body || 'Check the release notes for details!'}`
-            })
