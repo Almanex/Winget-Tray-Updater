@@ -1,0 +1,7 @@
+# Preview Placeholder
+This folder should contain a screenshot of the application.
+
+## To create a preview image:
+1. Take a screenshot of the application running
+2. Save as 'preview.png' (recommended size: 800x600px)
+3. Place in this folder

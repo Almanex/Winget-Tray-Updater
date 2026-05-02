@@ -1,0 +1,53 @@
+name: Feature Request
+description: Suggest a new feature or improvement
+title: '[Feature] '
+labels: ['enhancement']
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ✨ Feature Description
+        Describe the feature you'd like to see.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or Motivation
+      description: What problem does this feature solve?
+      placeholder: |
+        I often find myself doing X, which is tedious because...
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: How should this feature work?
+      placeholder: |
+        I would like to see a new option/action that...
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Any alternative solutions you've considered?
+      placeholder: |
+        I've tried using X but...
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any other context or screenshots?
+      placeholder: |
+        Screenshots, mockups, or other information here
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: 
+      options:
+        - label: I have searched for similar feature requests
+          required: true
+        - label: This feature is not already implemented
+          required: true

@@ -1,0 +1,71 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Publish
+publish/
+publish-new/
+
+# User-specific files
+*.rsuser
+*.user
+*.userosscache
+*.sln.docstates
+
+# NuGet
+*.nupkg
+*.snupkg
+*.nuget.props
+*.nuget.targets
+project.nuget.cache
+
+# Visual Studio Code
+.vscode/
+!.vscode/extensions.json
+*.code-workspace
+
+# Settings files (for local dev)
+settings.json
+
+# Logs
+*.log
+error.log
+stderr.log
+stdout.log
+winget-tray.log
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# JetBrains Rider
+.idea/
+
+# Temporary files
+*.tmp
+*.temp
+~*
+
+# Release builds (keep Assets)
+*.exe
+*.dll
+*.pdb
+!Assets/**
