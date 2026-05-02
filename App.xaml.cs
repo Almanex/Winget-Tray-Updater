@@ -104,12 +104,12 @@ public partial class App : Application
                 ShowSettingsWindow();
             }
 
-            Log(_loc["AppStarted"]);
+            Log(_loc!["AppStarted"]);
         }
         catch (Exception ex)
         {
             LogException(ex);
-            MessageBox.Show(_loc["StartupError"] + ": " + ex.Message, _loc["AppName"], 
+            MessageBox.Show(_loc!["StartupError"] + ": " + ex.Message, _loc!["AppName"], 
                 MessageBoxButton.OK, MessageBoxImage.Error);
             Shutdown(1);
         }
